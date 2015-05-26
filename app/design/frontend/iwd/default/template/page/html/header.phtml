@@ -29,6 +29,43 @@
 ?>
 
 <div class="header-language-background">
+
+    <a class="logo" href="<?php echo $this->getUrl('') ?>">
+        <img src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>" class="large"/>
+    </a>
+
+    <!-- Navigation -->
+
+    <div id="header-nav" class="skip-content">
+        <?php echo $this->getChildHtml('topMenu') ?>
+    </div>
+
+    <!-- Cart -->
+
+    <div class="header-minicart">
+        <?php echo $this->getChildHtml('minicart_head'); ?>
+    </div>
+
+    <!-- Search -->
+
+    <div id="header-search" class="skip-content">
+        <?php echo $this->getChildHtml('topSearch') ?>
+    </div>
+
+    <!-- Account -->
+
+    <div id="header-account" class="skip-content">
+        <?php echo $this->getChildHtml('topLinks') ?>
+    </div>
+
+    <div class="account-cart-wrapper">
+        <a href="<?php echo $this->helper('customer')->getAccountUrl(); ?>"
+           data-target-element="#header-account" class="skip-link skip-account">
+            <span class="icon"></span>
+        </a>
+
+    </div>
+
     <div class="header-language-container">
         <div class="store-language-container">
             <?php echo $this->getChildHtml('store_language') ?>
@@ -36,19 +73,17 @@
 
         <?php echo $this->getChildHtml('currency_switcher') ?>
 
-        <p class="welcome-msg"><?php echo $this->getChildHtml('welcome') ?> <?php echo $this->getAdditionalHtml() ?></p>
+        <?php //echo $this->getAdditionalHtml() ?><!--</p>-->
     </div>
+
 </div>
 
 <header id="header" class="page-header">
     <div class="a page-header-container">
-        <a class="logo" href="<?php echo $this->getUrl('') ?>">
-            <img src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>" class="large" />
-            <img src="<?php echo $this->getLogoSrcSmall() ?>" alt="<?php echo $this->getLogoAlt() ?>" class="small" />
-        </a>
 
         <?php // In order for the language switcher to display next to logo on smaller viewports, it will be moved here.
-              // See app.js for details ?>
+        // See app.js for details
+        ?>
         <div class="store-language-container"></div>
 
         <!-- Skip Links -->
@@ -64,41 +99,27 @@
                 <span class="label"><?php echo $this->__('Search'); ?></span>
             </a>
 
-            <div class="account-cart-wrapper">
-                <a href="<?php echo $this->helper('customer')->getAccountUrl(); ?>" data-target-element="#header-account" class="skip-link skip-account">
-                    <span class="icon"></span>
-                    <span class="label"><?php echo $this->__('Account'); ?></span>
-                </a>
-
-                <!-- Cart -->
-
-                <div class="header-minicart">
-                    <?php echo $this->getChildHtml('minicart_head'); ?>
-                </div>
-            </div>
-
-
         </div>
 
-        <!-- Navigation -->
-
-        <div id="header-nav" class="skip-content">
-            <?php echo $this->getChildHtml('topMenu') ?>
-        </div>
-
-        <!-- Search -->
-
-        <div id="header-search" class="skip-content">
-            <?php echo $this->getChildHtml('topSearch') ?>
-        </div>
-
-        <!-- Account -->
-
-        <div id="header-account" class="skip-content">
-            <?php echo $this->getChildHtml('topLinks') ?>
-        </div>
     </div>
 </header>
 
 
 <?php echo $this->getChildHtml('topContainer'); ?>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+
+<script>
+    $(document).ready(function () {
+
+        $('.nav-primary .nav-5').on('click', function () {
+
+            event.preventDefault();
+
+            $('.nav-primary').toggleClass('show-more-nav');
+        });
+
+    });
+</script>
+
+
