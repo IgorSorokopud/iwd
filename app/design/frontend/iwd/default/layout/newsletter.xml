@@ -28,17 +28,7 @@
 -->
 <layout version="0.1.0">
 
-<!--
-Default layout, loads most of the pages
--->
 
-    <default>
-
-        <!-- Mage_Newsletter -->
-        <reference name="footer">
-            <block type="newsletter/subscribe" name="footer.newsletter" as="newsletter" before="footer_store_language" template="newsletter/subscribe.phtml"/>
-        </reference>
-    </default>
 
 <!--
 Customer account pages, rendered for all tabs in dashboard

@@ -141,12 +141,12 @@
                     <action method="setTitle"><title>Quick Links</title></action>
                 </block>
                 <block type="page/template_links" name="footer_links2" as="footer_links2" template="page/template/links.phtml">
-                    <action method="setTitle"><title>Account</title></action>
+                    <action method="addLink" translate="label title"><label>Expanded</label><url>/expanded</url><title>Expanded</title></action>
+                    <action method="addLink" translate="label title"><label>Sub Navigation</label><url>/sub_navigation</url><title>Sub Navigation</title></action>
+                    <action method="addLink" translate="label title"><label>Employment</label><url>/employment</url><title>Employment</title></action>
+                    <action method="addLink" translate="label title"><label>Questions</label><url>/questions</url><title>Questions</title></action>
+                    <action method="addLink" translate="label title"><label>Contact</label><url>/contact</url><title>Contact</title></action>
                 </block>
-                <!-- This static block can be created and populated in admin. The footer_links cms block can be used as a starting point. -->
-                <!--<block type="cms/block" name="footer_social_links">
-                    <action method="setBlockId"><block_id>footer_social_links</block_id></action>
-                </block>-->
             </block>
 
             <block type="core/text_list" name="before_body_end" as="before_body_end" translate="label">

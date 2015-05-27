@@ -1357,7 +1357,53 @@ a.button:hover {
 }
 
 .footer-container {
-    padding-top: 0px;
+    padding-top: 0;
+    background-color: #101010;
+}
+
+.footer-logo {
+    width: 202px;
+    height: 86px;
+    background: url("../images/logo_footer.png") no-repeat;
+    float: left;
+}
+
+.footer-product-category {
+    width: 230px;
+    float: left;
+}
+
+.footer-product-category li a {
+    color: #ffffff;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.footer a:hover {
+    color: #ed2724;
+    text-decoration: none;
+}
+
+.footer a:visited {
+    color: #5d5d5d;
+}
+
+.footer-product-category li {
+    margin: 5px 58px;
+}
+
+.footer-social-links {
+    /* width: 200px; */
+    float: left;
+    /* margin-right: 118px; */
+}
+
+.footer-social-links li a {
+    color: #ffffff;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
 }
 
 /* -------------------------------------------- *
@@ -3613,6 +3659,7 @@ a.skip-link {
  * Global Header Navigation
  * ============================================ */
 @media only screen and (max-width: 770px) {
+
     #header-account li a,
     .nav-primary a.level0 {
         padding: 0 15px 0 25px;
@@ -3630,7 +3677,7 @@ a.skip-link {
 
     .no-touch #header-account a:hover,
     .no-touch .nav-primary a:hover {
-        background-color: #f4f4f4;
+        color: red;
         text-decoration: none;
     }
 }
@@ -3678,6 +3725,7 @@ a.skip-link {
 }
 
 @media only screen and (min-width: 771px) {
+
     .skip-nav {
         display: none;
     }
@@ -3909,7 +3957,6 @@ a.skip-link {
     display: block;
 }
 
-
 /* ============================================ *
  * Search - Skip Link
  * ============================================ */
@@ -4044,8 +4091,9 @@ a.skip-link {
     }
 
     #header-account a:hover {
-        color: #3399cc;
+        color: #ed2a23;
     }
+
 }
 
 /* -------------------------------------------- *
@@ -4272,9 +4320,22 @@ a.skip-link {
     width: 100%;
     border-top: 1px solid #cccccc;
     padding-top: 30px;
+    position: relative;
     /* -------------------------------------------- *
    * Social icons
    */
+}
+
+.footer-info {
+    float: right;
+    width: 270px;
+    color: #ffffff;
+    font-family: sans-serif;
+}
+
+.footer-info span {
+    color: #626262;
+    font-weight: 700;
 }
 
 @media only screen and (max-width: 479px) {
@@ -4298,10 +4359,8 @@ a.skip-link {
 }
 
 .footer .links {
-    float: left;
-    width: 17%;
     padding: 0 30px 0 0;
-    margin-bottom: 30px;
+    margin-bottom: 13px;
 }
 
 .footer .links li {
@@ -4311,11 +4370,13 @@ a.skip-link {
 }
 
 .footer .links a {
-    color: #636363;
+    color: #ffffff;
+    font-weight: 700;
 }
 
 .footer .links a:hover {
-    color: #3399cc;
+    /*color: #ed2724;*/
+    text-decoration: none;
 }
 
 .footer .block-subscribe {
@@ -4327,7 +4388,6 @@ a.skip-link {
 .footer .links,
 .footer .block-subscribe {
     text-transform: uppercase;
-    font-size: 12px;
 }
 
 .footer .form-subscribe-header {
@@ -4455,19 +4515,27 @@ a.skip-link {
 }
 
 .footer address {
-    border-top: 1px solid #cccccc;
     text-align: center;
     width: 100%;
     font-size: 11px;
     margin-top: 30px;
-    padding: 30px 0;
+    padding-top: 70px;
+    color: #ffffff;
+    font-family: sans-serif;
+    letter-spacing: 0.5px;
 }
 
-@media only screen and (max-width: 1199px) {
-    .footer .links {
-        width: 22.65625%;
-        padding-right: 0;
-        margin-right: 3.125%;
+@media only screen and (max-width: 1270px) {
+    .footer-info {
+        float: none;
+        margin: 275px auto 0 auto;
+        border-top: 1px solid #ffffff;
+        padding-top: 25px;
+        text-align: center;
+    }
+
+    .footer-social-links {
+        margin-left: 100px;
     }
 
     .footer .links:nth-child(4) {
@@ -4481,17 +4549,36 @@ a.skip-link {
     }
 }
 
-@media only screen and (max-width: 770px) {
-    .footer .form-language,
-    .footer .currency-switcher {
-        display: block;
+@media only screen and (max-width: 900px) {
+    .footer-social-links {
+        width: 200px;
+        float: none;
+        margin: 280px auto 0 auto;
+        text-align: center;
+        border-top: 1px solid #ffffff;
+        padding-top: 20px;
+    }
+
+    .footer-info {
+        margin: 50px auto 0 auto;
     }
 }
 
-@media only screen and (max-width: 599px) {
-    .footer .links {
-        width: 48.4375%;
-        margin-right: 0;
+@media only screen and (max-width: 800px) {
+    .footer-product-category {
+        float: none;
+        margin: 30px auto;
+        border-top: 1px solid #ffffff;
+        text-align: center;
+    }
+
+    .footer-logo {
+        float: none;
+        margin: auto;
+    }
+
+    .footer-social-links {
+        margin: 50px auto 0 auto;
     }
 
     .footer .links:nth-child(odd) {
@@ -5158,6 +5245,7 @@ p.product-name a:hover {
 }
 
 @media only screen and (min-width: 771px) {
+
     .block-layered-nav .block-content > dl > dt {
         padding-left: 10px;
     }
@@ -5167,7 +5255,46 @@ p.product-name a:hover {
     }
 }
 
+.hide-button-more {
+    display: none;
+}
+
 @media only screen and (max-width: 770px) {
+
+    /*my*/
+    .header-language-background,
+    .header-language-background .logo,
+    #header-search,
+    .account-cart-wrapper {
+        display: none;
+    }
+
+    .nav-primary li.level0 > a {
+        font-size: 8pt;
+        color: #ffffff;
+        text-align: center;
+    }
+
+    .skip-content {
+        display: block;
+    }
+
+    .nav-primary li {
+        background-color: #1e1e1e;
+        border-radius: 5px;
+    }
+
+    #header-account li {
+        background-color: #626262;
+        border-radius: 5px;
+    }
+
+    #header-account li a {
+        color: #ffffff;
+        text-align: center;
+    }
+
+    /*my*/
     .sidebar .block.block-layered-nav {
         border-bottom: none;
     }
@@ -5299,6 +5426,10 @@ p.product-name a:hover {
         text-decoration: none;
         background: #ececec;
     }
+}
+
+.show-mini-nav {
+    display: block;
 }
 
 .block-layered-nav .currently .block-subtitle {
@@ -10385,7 +10516,7 @@ div.paypal-logo span > img {
 
 @media only screen and (max-width: 770px) {
     .header-minicart {
-        display: block;
+        display: none;
     }
 }
 
@@ -11923,11 +12054,13 @@ div.calendar table td.button {
 
 @media only screen and (max-width: 1160px) {
     .skip-cart {
-       width: 80px;
+        width: 80px;
     }
+
     #search_mini_form .input-box {
         margin-left: 0;
     }
+
     .wrapper {
         width: 90%
     }
@@ -11937,9 +12070,11 @@ div.calendar table td.button {
     .nav-primary li.level0 > a {
         font-size: 8pt;
     }
+
     .skip-account {
         padding-left: 0;
     }
+
     .skip-cart {
         width: 50px;
         padding: 0 10%;
@@ -11951,3 +12086,13 @@ div.calendar table td.button {
         margin: 0;
     }
 }
+
+.footer-social-links a:hover {
+    color: #ed2724;
+}
+
+/*.test {*/
+/*position: relative;*/
+/*width: 250px;*/
+/*float: left;*/
+/*}*/

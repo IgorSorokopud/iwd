@@ -112,11 +112,23 @@
 <script>
     $(document).ready(function () {
 
+        <!--    +More    -->
+
         $('.nav-primary .nav-5').on('click', function () {
 
             event.preventDefault();
 
             $('.nav-primary').toggleClass('show-more-nav');
+        });
+
+        <!--    Button Menu    -->
+
+        $('.skip-nav').on('click', function () {
+
+            $('.header-language-background').toggleClass('show-mini-nav');
+
+            $('.nav-primary .nav-5').toggleClass('hide-button-more');
+
         });
 
     });
